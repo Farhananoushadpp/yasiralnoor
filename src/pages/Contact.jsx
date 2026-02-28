@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import {
   MapPin,
   Phone,
+  PhoneCall,
   Mail,
   Clock,
   Send,
@@ -93,13 +94,19 @@ const Contact = () => {
       title: "Address",
       content:
         "#14 B6 Block, Xavier Business Center, Burj Nahar Mall, Al Muteena, Dubai",
-      link: null,
+      link: "https://www.google.com/maps/dir/25.2737404,55.3162521/Yasir+Alnoor+Construction,+Al+Muteena+-+Deira+-+Dubai/@25.2737411,55.313511,17z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3e5f5d9e06b50917:0x9db0bbc0236bcb4f!2m2!1d55.3162067!2d25.2736559?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: "Mobile",
       content: "+971 58 236 5647",
       link: "tel:+971582365647",
+    },
+    {
+      icon: PhoneCall,
+      title: "Landline",
+      content: "+971 4 346 0603",
+      link: "tel:+97143460603",
     },
     {
       icon: Mail,
@@ -206,9 +213,19 @@ const Contact = () => {
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start">
-                      <div className="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                        <info.icon className="text-[#005baa]" size={20} />
-                      </div>
+                      {info.link ? (
+                        <a
+                          href={info.link}
+                          className="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center flex-shrink-0 mr-4 hover:bg-gray-100 transition-colors"
+                          aria-label={info.title}
+                        >
+                          <info.icon className="text-[#005baa]" size={20} />
+                        </a>
+                      ) : (
+                        <div className="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                          <info.icon className="text-[#005baa]" size={20} />
+                        </div>
+                      )}
                       <div>
                         <h4 className="font-semibold mb-1">{info.title}</h4>
                         {info.link ? (
