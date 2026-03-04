@@ -105,8 +105,8 @@ const Contact = () => {
     {
       icon: PhoneCall,
       title: "Landline",
-      content: "+971 4 346 0603",
-      link: "tel:+97143460603",
+      content: "+971 4 346 0608",
+      link: "tel:+97143460608",
     },
     {
       icon: Mail,
