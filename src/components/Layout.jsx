@@ -431,7 +431,7 @@ const Layout = () => {
                 </div>
                 <div className="flex items-start">
                   <a
-                    href="tel:+97143460603"
+                    href="tel:+97143460608"
                     className="text-[#005baa] hover:text-[#00a2e5] transition-colors flex-shrink-0 mt-1 mr-1 xs:mr-2"
                     aria-label="Call landline"
                   >
@@ -439,10 +439,10 @@ const Layout = () => {
                   </a>
                   <div>
                     <a
-                      href="tel:+97143460603"
+                      href="tel:+97143460608"
                       className="text-gray-600 hover:text-[#005baa] transition text-sm"
                     >
-                      +971 4 346 0603
+                      +971 4 346 0608
                     </a>
                   </div>
                 </div>

@@ -188,7 +188,7 @@ const CleaningServices = () => {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url("/clean.jpg")' }}
+            style={{ backgroundImage: 'url("/clean.webp")' }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#005baa]/85 via-[#005baa]/75 to-[#005baa]/65">
               <div className="absolute inset-0 opacity-20">
