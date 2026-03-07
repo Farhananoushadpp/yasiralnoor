@@ -13,6 +13,8 @@ import {
   ChevronRight,
   PhoneCall,
   MessageCircle,
+  MessageSquare,
+  Smartphone,
 } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -37,7 +39,7 @@ const Layout = () => {
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
     { path: "/services", label: "Services" },
-    { path: "/cleaning-services", label: "Cleaning" },
+    { path: "/cleaning-services", label: "Cleaning Services" },
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
   ];
@@ -193,7 +195,7 @@ const Layout = () => {
       {/* Footer */}
       <footer className="bg-white text-gray-900 border-t border-gray-200 pt-12 xs:pt-16 md:pt-20">
         <div className="container-custom pb-8 xs:pb-12 md:pb-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 xs:gap-8">
             {/* Company Info */}
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-1 xs:space-x-2 mb-3 xs:mb-4">
@@ -215,15 +217,9 @@ const Layout = () => {
 
               {/* Social Media Icons */}
               <div className="flex items-center space-x-3 xs:space-x-4">
-                <a
-                  href="https://wa.me/971544018604"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-[#25D366] transition-colors"
-                  aria-label="WhatsApp"
-                >
-                  <MessageCircle size={16} className="xs:size-5" />
-                </a>
+                <div className="flex items-center text-gray-600 cursor-not-allowed opacity-50">
+                  <Facebook size={16} className="xs:size-5" />
+                </div>
                 <a
                   href="https://www.instagram.com/yasiralnoorcontracting?igsh=MW9wODdoYjlhYTRnbA=="
                   target="_blank"
@@ -232,6 +228,23 @@ const Layout = () => {
                   aria-label="Instagram"
                 >
                   <Instagram size={16} className="xs:size-5" />
+                </a>
+                <a
+                  href="https://wa.me/971544018604"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group text-gray-600 hover:text-[#25D366] transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="xs:size-5"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -304,14 +317,6 @@ const Layout = () => {
                 </li>
                 <li>
                   <Link
-                    to="/cleaning-services"
-                    className="text-gray-600 hover:text-[#005baa] transition text-sm"
-                  >
-                    Cleaning Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/services"
                     className="text-gray-600 hover:text-[#005baa] transition text-sm"
                   >
@@ -319,6 +324,63 @@ const Layout = () => {
                   </Link>
                 </li>
               </ul>
+            </div>
+
+            {/* Cleaning Services */}
+            <div>
+              <h4 className="text-base xs:text-lg font-semibold mb-3 xs:mb-4 text-gray-900">
+                Cleaning Services
+              </h4>
+              <div className="space-y-3 xs:space-y-4">
+                <p className="text-gray-600 text-sm leading-relaxed mb-3 xs:mb-4">
+                  Professional cleaning solutions for residential and commercial
+                  spaces.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-gray-600 text-sm">
+                    <div className="w-2 h-2 bg-[#005baa] rounded-full mr-2 flex-shrink-0"></div>
+                    Deep Cleaning
+                  </div>
+                  <div className="flex items-center text-gray-600 text-sm">
+                    <div className="w-2 h-2 bg-[#005baa] rounded-full mr-2 flex-shrink-0"></div>
+                    Office Cleaning
+                  </div>
+                  <div className="flex items-center text-gray-600 text-sm">
+                    <div className="w-2 h-2 bg-[#005baa] rounded-full mr-2 flex-shrink-0"></div>
+                    Post-Construction
+                  </div>
+                  <div className="flex items-center text-gray-600 text-sm">
+                    <div className="w-2 h-2 bg-[#005baa] rounded-full mr-2 flex-shrink-0"></div>
+                    Maintenance Cleaning
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-gray-100">
+                  <Link
+                    to="/cleaning-services"
+                    className="inline-flex items-center text-[#005baa] hover:text-[#00a2e5] font-medium text-sm transition-colors"
+                  >
+                    View All Services
+                    <ChevronRight size={14} className="ml-1" />
+                  </Link>
+                </div>
+                <div className="flex items-start">
+                  <a
+                    href="tel:+971503366801"
+                    className="text-[#005baa] hover:text-[#00a2e5] transition-colors flex-shrink-0 mt-1 mr-1 xs:mr-2"
+                    aria-label="Call cleaning services"
+                  >
+                    <Phone size={3} className="xs:size-4" />
+                  </a>
+                  <div>
+                    <a
+                      href="tel:+971503366801"
+                      className="text-gray-600 hover:text-[#005baa] transition text-sm block"
+                    >
+                      +971 50 336 6801
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Info */}
